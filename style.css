@@ -42,7 +42,7 @@ aside {
   position: fixed;
 }
 .logo {
-  padding: 0.2rem 1.7rem 0.1rem 0.9rem;
+  padding: 0.2rem 1.7rem 0.1rem 0.7rem;
   width: 2rem;
   aspect-ratio: 1/1;
 }
@@ -161,6 +161,9 @@ aside nav ul li:hover {
 @media screen and (max-width: 1281px) {
   aside nav ul li a {
     display: none;
+  }
+  aside nav ul li {
+    padding-right: 12px;
   }
   .tweet span {
     display: none;
@@ -887,8 +890,6 @@ label {
   aspect-ratio: 1/1;
   border-radius: 50%;
 }
-.follow-acount {
-}
 .follow-acount span {
   display: flex;
   font-size: 15px;
@@ -1109,7 +1110,93 @@ form div:focus-within .tweeting div {
   justify-content: center;
   margin-right: 12px;
 }
-
+.direct-messages-pop-up {
+  color: #e7e9ea;
+  position: fixed;
+  z-index: 500;
+  min-width: 350px;
+  max-width: 400px;
+  margin-right: 20px;
+  bottom: 0%;
+  right: 0%;
+  background-color: #000;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 15px,
+    rgba(255, 255, 255, 0.15) 0px 0px 3px 1px;
+  border-radius: 16px 16px 0 0;
+  max-height: 530px;
+  height: 80vh;
+  transition: all 300ms ease 0s;
+  transform: translateY(90%);
+  cursor: pointer;
+}
+.direct-messages-pop-up:hover {
+  transform: translateY(0%);
+}
+.DMs-header,
+.DMs-header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.DMs-header {
+  padding: 0 16px;
+  height: 53px;
+}
+.DMs-header span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.DMs-header svg {
+  width: 20px;
+  aspect-ratio: 1/1;
+  fill: currentColor;
+  padding: 7px;
+  border-radius: 50%;
+  transition: 0.1s ease-in-out;
+}
+.DMs-header svg:hover {
+  background-color: #181919;
+}
+.DM-container {
+  padding: 16px;
+  display: flex;
+  font-size: 15px;
+  position: relative;
+}
+.DM-container:hover {
+  background-color: #16181c;
+}
+.DM-container span {
+  color: #71767b;
+}
+.dm-profile-image img {
+  width: 48px;
+  height: fit-content;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+.DM-option-dot {
+  display: none;
+  position: absolute;
+  right: 5%;
+  width: 1.2rem;
+  aspect-ratio: 1/1;
+  fill: currentColor;
+  color: #71767b;
+  border-radius: 50%;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+  padding: 5px;
+}
+.DM-container:hover .DM-option-dot {
+  display: block;
+}
+.DM-option-dot:hover {
+  background-color: #172631;
+  color: #1a81c7;
+}
 /*///////////////
   media quaries 
   //////////////*/
@@ -1120,6 +1207,9 @@ form div:focus-within .tweeting div {
   }
   body > header {
     width: 29%;
+  }
+  .direct-messages-pop-up {
+    display: none;
   }
 }
 
@@ -1150,7 +1240,6 @@ form div:focus-within .tweeting div {
   main {
     justify-content: center !important;
   }
-
   form {
     position: absolute;
     visibility: hidden;
@@ -1210,5 +1299,13 @@ form div:focus-within .tweeting div {
 @media screen and (max-width: 1094px) {
   .search-result {
     width: 306px;
+  }
+}
+@media screen and (max-height: 499px) {
+  .direct-messages-pop-up {
+    bottom: 80px;
+  }
+  .direct-messages-pop-up:hover {
+    transform: translateY(20%);
   }
 }
