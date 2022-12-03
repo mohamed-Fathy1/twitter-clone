@@ -1032,6 +1032,10 @@ form div:focus-within .tweeting div {
   text-decoration: none;
   color: #1d9bf0;
   padding: 0px 12px;
+  border-radius: 99px;
+}
+.recent a:hover {
+  background-color: #031018;
 }
 .search-profile {
   display: flex;
@@ -1090,6 +1094,25 @@ form div:focus-within .tweeting div {
 .search-profile-info > svg:hover {
   background-color: #1d2c37;
 }
+.search-icon > svg {
+  width: 28px;
+  height: fit-content;
+  aspect-ratio: 1/1;
+  color: #e7e9ea;
+  fill: currentColor;
+  padding: 5px;
+  border-radius: 50%;
+}
+.search-profile .search-icon {
+  width: 58px;
+  display: flex;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+/*///////////////
+  media quaries 
+  //////////////*/
 
 @media screen and (max-width: 992px) {
   main section:nth-child(2) {
@@ -1182,5 +1205,10 @@ form div:focus-within .tweeting div {
   }
   .attatched-text span:last-child {
     display: none;
+  }
+}
+@media screen and (max-width: 1094px) {
+  .search-result {
+    width: 306px;
   }
 }
