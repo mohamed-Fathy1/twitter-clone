@@ -609,7 +609,7 @@ article:hover {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  gap: 2px;
+  gap: 3px;
   overflow: hidden;
 }
 .images img {
@@ -622,6 +622,11 @@ article:hover {
   height: 50%;
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+.images-four div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 .from {
   font-size: 13px !important;
@@ -1273,7 +1278,10 @@ form div:focus-within .tweeting div {
     font-size: 0.85rem !important;
   }
   .tweet-contant p,
-  .tweet-info-container span {
+  .tweet-info-container span,
+  .vote-percentage,
+  .vote-text,
+  .poll span {
     font-size: 0.8rem !important;
   }
   .replied span {
@@ -1294,6 +1302,9 @@ form div:focus-within .tweeting div {
   }
   .attatched-text span:last-child {
     display: none;
+  }
+  .from {
+    font-size: 0.68rem !important;
   }
 }
 @media screen and (max-width: 1094px) {
