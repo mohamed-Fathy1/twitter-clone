@@ -1202,6 +1202,33 @@ form div:focus-within .tweeting div {
   background-color: #172631;
   color: #1a81c7;
 }
+.mobile-tweet {
+  display: none;
+
+  position: fixed;
+  z-index: 2000;
+  bottom: 85px;
+  right: 13%;
+  box-shadow: rgb(217 217 217 / 20%) 0px 0px 5px,
+    rgb(217 217 217 / 25%) 0px 1px 4px 1px;
+  background-color: rgb(29, 155, 240);
+  border-color: rgb(83, 100, 113);
+  min-height: 52px;
+  height: 48px;
+  border-radius: 999px;
+  padding: 0 32px;
+}
+.mobile-tweet svg {
+  width: 1.6rem;
+  aspect-ratio: 1/1;
+  color: rgb(231, 233, 234);
+  fill: currentColor;
+  cursor: pointer;
+}
+.mobile-tweet b {
+  font-size: 17px;
+  color: rgb(231, 233, 234);
+}
 /*///////////////
   media quaries 
   //////////////*/
@@ -1272,17 +1299,33 @@ form div:focus-within .tweeting div {
   .mobile-pic img {
     display: flex !important;
   }
+  .mobile-tweet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
 }
 @media screen and (max-width: 499px) {
   article > * {
     font-size: 0.85rem !important;
   }
+  .mobile-tweet b {
+    display: none;
+  }
+  .mobile-tweet {
+    padding: 0;
+    border-radius: 50%;
+    width: 52px;
+    right: 5%;
+  }
+
   .tweet-contant p,
   .tweet-info-container span,
   .vote-percentage,
   .vote-text,
   .poll span {
-    font-size: 0.8rem !important;
+    font-size: 0.85rem !important;
   }
   .replied span {
     font-size: 0.75rem;
@@ -1317,6 +1360,6 @@ form div:focus-within .tweeting div {
     bottom: 80px;
   }
   .direct-messages-pop-up:hover {
-    transform: translateY(20%);
+    transform: translateY(20px);
   }
 }
