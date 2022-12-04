@@ -444,7 +444,7 @@ article:hover {
   width: 19px;
   aspect-ratio: 1/1;
   fill: currentColor;
-  color: #e7e9ea;
+  color: rgb(29, 155, 240);
   margin-left: 2px;
 }
 .tweet-contant-container {
@@ -910,7 +910,7 @@ label {
 .follow-acount .name svg {
   width: 1.1rem;
   aspect-ratio: 1/1;
-  color: rgb(231, 233, 234);
+  color: rgb(29, 155, 240);
   fill: currentColor;
   cursor: pointer;
   margin-left: 2px;
