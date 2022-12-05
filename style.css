@@ -373,9 +373,7 @@ article:hover {
   font-weight: 700;
   font-size: 0.8rem;
 }
-.replied span:hover {
-  text-decoration: underline;
-}
+
 .tweet-post {
   width: 100%;
   display: flex;
@@ -407,9 +405,7 @@ article:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.tweet-info b:hover {
-  text-decoration: underline;
-}
+
 .tweet-info-container {
   display: flex;
   justify-content: space-between;
@@ -433,10 +429,7 @@ article:hover {
   cursor: pointer;
   padding: 5px;
 }
-.option-dot:hover {
-  background-color: #031018;
-  color: rgb(29, 155, 240);
-}
+
 .tweet-info {
   display: flex;
 }
@@ -457,9 +450,7 @@ article:hover {
   text-decoration: none;
   font-style: normal;
 }
-.tweet-contant a:hover {
-  text-decoration: underline;
-}
+
 .tweet-contant p {
   font-size: 15px;
 }
@@ -488,32 +479,7 @@ article:hover {
   border-radius: 50%;
   transition: 0.1s ease-in-out;
 }
-.comment:hover {
-  color: #1d9bf0;
-}
-.comment:hover svg {
-  background-color: #031018;
-}
-.re-tweet:hover,
-.re-tweetBtn:checked + label {
-  color: #00ba7c;
-}
-.re-tweet:hover svg {
-  background-color: #071a14;
-}
-.likes:hover,
-.likeBtn:checked + label {
-  color: #f91880;
-}
-.likes:hover svg {
-  background-color: #200914;
-}
-.share:hover {
-  color: #1d9bf0;
-}
-.share:hover svg {
-  background-color: #031018;
-}
+
 .absolute {
   position: relative;
   width: 1.19rem;
@@ -528,9 +494,7 @@ article:hover {
   padding: 2px 16px;
   box-sizing: content-box;
 }
-.thread:hover {
-  background-color: #101010;
-}
+
 .thread-pic {
   width: 48px;
   display: flex;
@@ -1362,4 +1326,52 @@ form div:focus-within .tweeting div {
   .direct-messages-pop-up:hover {
     transform: translateY(20px);
   }
+}
+@media (hover: hover) {
+  .replied span:hover {
+    text-decoration: underline;
+  }
+  .tweet-info b:hover {
+    text-decoration: underline;
+  }
+  .option-dot:hover {
+    background-color: #031018;
+    color: rgb(29, 155, 240);
+  }
+  .tweet-contant a:hover {
+    text-decoration: underline;
+  }
+  .comment:hover {
+    color: #1d9bf0;
+  }
+  .comment:hover svg {
+    background-color: #031018;
+  }
+  .re-tweet:hover {
+    color: #00ba7c;
+  }
+  .re-tweet:hover svg {
+    background-color: #071a14;
+  }
+  .likes:hover {
+    color: #f91880;
+  }
+  .likes:hover svg {
+    background-color: #200914;
+  }
+  .share:hover {
+    color: #1d9bf0;
+  }
+  .share:hover svg {
+    background-color: #031018;
+  }
+  .thread:hover {
+    background-color: #101010;
+  }
+}
+.likeBtn:checked + label {
+  color: #f91880;
+}
+.re-tweetBtn:checked + label {
+  color: #00ba7c;
 }
